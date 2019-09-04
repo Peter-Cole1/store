@@ -9,7 +9,7 @@ html, #bg {
 
 
 #cover {
-position: fixed;
+position: relative;
 display: block;
 min-width: 100%;
 }
@@ -118,3 +118,26 @@ min-width: 100%;
     font-family: 'Handlee', cursive;
 }
 
+#footer {
+    font-family: 'Handlee', cursive;
+    position: relative;
+    left: 0;
+    bottom: 10;
+    width: 100%;
+    text-align: center;
+}
+
+#about {
+    font-family: 'Handlee', cursive;
+    position: relative;
+    left: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+@media only screen and (min-width: 360px) {
+    #navbar-nav #navbar-left {
+      font-size: 1em;
+    }
+  }
