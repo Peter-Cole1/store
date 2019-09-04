@@ -1,25 +1,18 @@
-html {
+html, #bg {
     background: url(../images/other/background.svg) no-repeat center center fixed;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
-    margin: 0;
-    padding: 0;
+    z-index: -1;
 }
 
 
 #cover {
-position: absolute;
+position: fixed;
 display: block;
 min-width: 100%;
 }
-
-#coverText {
-    text-align: center;
-    padding-top: 5em;
-}
-
 
 #imgdisplay {
     width: 100%;
@@ -36,20 +29,49 @@ min-width: 100%;
 #navbar {
     background-color: #f9f9f9;
     width: 100%;
+    height: 12em;
+    padding-top: 3em;
 }
 
 #navbar-nav.cart {
-    position: absolute;
+    position: fixed;
     right: 100%;
     transform: translatex(-50%);
 }
 
 #logo {
-    height: 5em;
+    height: 10em;
 }
 
 #test {
     background-color: blue;
-    height: 30em;
+    height: 52.2em;
+    position: absolute;
+    z-index: -1;
+}
+
+#apparel{
+    height: 5em;
+    z-index: 1;
+    background-color: black;
+    position: relative;
+}
+
+#item {
+    height: 25em;
+    align-content: center;
 
 }
+
+.img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+  
+}
+
+.nav-link {
+    font-size: 2em !important;
+}
+
