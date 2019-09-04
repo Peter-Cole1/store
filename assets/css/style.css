@@ -1,0 +1,55 @@
+html {
+    background: url(../images/other/background.svg) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+#cover {
+position: absolute;
+display: block;
+min-width: 100%;
+}
+
+#coverText {
+    text-align: center;
+    padding-top: 5em;
+}
+
+
+#imgdisplay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+#navbar {
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+#navbar-nav.cart {
+    position: absolute;
+    right: 100%;
+    transform: translatex(-50%);
+}
+
+#logo {
+    height: 5em;
+}
+
+#test {
+    background-color: blue;
+    height: 30em;
+
+}
