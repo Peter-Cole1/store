@@ -68,5 +68,10 @@ min-width: 100%;
 
 .nav-link {
     font-size: 2em !important;
+    font-family: 'Handlee', cursive;
+}
+
+#products {
+    font-family: 'Handlee', cursive;
 }
 
