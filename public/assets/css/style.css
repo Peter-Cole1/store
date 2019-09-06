@@ -1,0 +1,143 @@
+html, #bg {
+    background: url(../images/other/bgTest.png) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+
+}
+
+
+#cover {
+position: relative;
+display: block;
+min-width: 100%;
+}
+
+#imgdisplay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+#navbar {
+    background:url(../images/other/bgTest2.png);
+    width: 100%;
+    height: 12em;
+    padding-top: 3em;
+    position: fixed;
+    z-index: 2;    
+}
+
+#navbar-nav.cart {
+    position: fixed;
+    right: 100%;
+    transform: translatex(-50%);
+}
+
+#logo {
+    height: 10em;
+}
+
+#apparel{
+    height: 5em;
+    z-index: 1;
+    background-color: black;
+    position: relative;
+}
+
+.item {
+    display: inline-block;
+    position: relative;
+    padding-top: 5%;
+}
+
+.item img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: .3s;
+}
+
+.item:hover img {
+    filter:blur(3px) brightness(120%);
+}
+
+.item :not(img){
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+    color: #fff;
+    width: 100%;
+    transition: .3s;
+    opacity: 0;
+}
+
+.item h1 {
+    color: black;
+    top: 20%;
+    padding-left: 5%;
+    font-family: 'Handlee', cursive;
+}
+.item h4 {
+    color: black;
+    top: 40%;
+    padding-left: 5%;
+    font-family: 'Handlee', cursive;
+}
+
+.item:hover :not(img) {
+    opacity: 1;
+}
+
+.cartButton {
+    margin-top: 20%;
+    height: 3em;
+    width: 30% !important;
+    margin-left: 5%; 
+}
+
+.cartButton h5 {
+    font-family: 'Handlee', cursive;
+    color: black;
+}
+
+
+.nav-link {
+    font-size: 2em !important;
+    font-family: 'Handlee', cursive;
+}
+
+#products {
+    font-family: 'Handlee', cursive;
+}
+
+#footer {
+    font-family: 'Handlee', cursive;
+    position: relative;
+    left: 0;
+    bottom: 10;
+    width: 100%;
+    text-align: center;
+}
+
+#about {
+    font-family: 'Handlee', cursive;
+    position: relative;
+    left: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+@media only screen and (min-width: 360px) {
+    #navbar-nav #navbar-left {
+      font-size: 1em;
+    }
+  }
