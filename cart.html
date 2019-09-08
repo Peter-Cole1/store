@@ -67,7 +67,8 @@
 <div class="row">
 
   <div class="col-lg-4" id="item">
-    <a href="/api/cart"></a>
+    <a href="/api/cart">
+      <li class='list-group-item mt-4'></a>
   </div>
   <div class="col-lg-4" id="item">
    
@@ -143,6 +144,40 @@
 
 
 
+
+<script> 
+     function runCartQuery() {
+    // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+    $.ajax({ url: "/api/products", method: "GET" })
+      .then(function(productData) {
+
+        // Here we then log the tableData to console, where it will show up as an object.
+        console.log(productData);
+        console.log("------------------------------------");
+
+        // Loop through and display each of the customers
+        for (var i = 0; i < productData.length; i++) {
+
+          // Get a reference to the tableList element and populate it with tables
+          var cartList = $("#cartList");
+
+          // Then display the fields in the HTML (Section Name, Date, URL)
+          var listItem = $("<li class='list-group-item mt-4'>");
+
+          listItem.append(
+            $("<h2>").text("Table #" + (i + 1)),
+            $("<hr>"),
+            $("<h2>").text("ID: " + productData[i].productID),
+            $("<h2>").text("Name: " + productData[i].productName),
+            $("<h2>").text("Email: " + productData[i].price),
+            $("<h2>").text("Phone: " + productData[i].productType)
+          );
+
+          cartList.append(listItem);
+        }
+      });
+  }
+</script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
